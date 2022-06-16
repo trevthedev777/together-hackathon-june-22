@@ -1,108 +1,171 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Name of the APP xxxxxxxxxxxxxxxxx
 
-Welcome Tom-Nagy,
+![Mockup](documentation/mockup/mockup.png)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+Visit the live Website : **[xxxxx :arrow_right:](https://XXXXXXXXX)**
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+## Table of Content
 
-## Gitpod Reminders
+* [Project](#Project)
+  * [Project Goals](#Project-Goals)
+  * [Developer and Business Goals](#Developer-and-Business-Goals)
+* [UX](#UX)
+  * [Audience Definition](#Audience-Definition)
+  * [User Stories](#User-Stories)
+  * [Wireframes](#Wireframes)
+  * [Different Design](#Different-Design)
+* [Features](#Features)
+* [Future features to implement](#Future-features-to-implement)
+<!-- * [Database](#Database)
+  * [Database Design](#Database-Design)
+  * [Database Structure](#Database-Structure) -->
+* [Technologies Used](#Technologies-Used)
+* [Deployment](#Deployment)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## Project
 
-`python3 -m http.server`
+### Project Goals
 
-A blue button should appear to click: _Make Public_,
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-Another blue button should appear to click: _Open Browser_.
+### Developer and Business Goals
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+* Develop a viable web application.
+* Develop xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.
+* Develop a web application with space for improvement and optimization.
 
-A blue button should appear to click: _Make Public_,
+[**:back:** *Table of Content*](#Table-of-Content)
 
-Another blue button should appear to click: _Open Browser_.
+## UX
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### Audience definition
 
-To log into the Heroku toolbelt CLI:
+* The targeted audience is xxxxxxxxxxxxxxxxxxxxxxxxx
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+### User stories
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+1. xxxxxxxxxxxx
+2. xxxxxxxxxxx
 
-------
+[**:back:** *Table of Content*](#Table-of-Content)
 
-## Release History
+#### Fonts
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+#### Icons
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+* Some Font Awesome icons will be part of the website for better UX.
+* The [favicon](xxxxxx/favicon.ico) was generated from [favicon.io](https://favicon.io/favicon-generator/).
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+![Favicon](documentation/favicon/favicon.png)
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+#### Colors
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+![Color palette](documentation/colour-scheme/colour-scheme.png)
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+The colours chosen for the website are simple and joyful.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+* #xxxxxxx
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+[Adobe Color](https://color.adobe.com) explore was used to find the colour scheme. Compatibility and accessibility are valid and the color scheme and swatches are said color-blind safe by the accessibility tools.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+#### Styling/Feeling
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+The feel of the website is welcoming and simple to provide a quick access and learning process.  
+It makes users comfortable.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+#### Audio/Video/Images
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+[**:back:** *Table of Content*](#Table-of-Content)
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+### Wireframes
 
-------
+![Site map](documentation/wireframes/site-map.png)
 
-## FAQ about the uptime script
+* [Home page](documentation/wireframes/home.pdf)
 
-**Why have you added this script?**
+For the full version:
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+* [XXXXXXXXX ](documentation/wireframes/XXXXX.pdf)
 
-**How will this affect me?**
+[**:back:** *Table of Content*](#Table-of-Content)
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+### Different design
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+[**:back:** *Table of Content*](#Table-of-Content)
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+## Features
 
-**So….?**
+### feature name ..... 
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+### Defensive design
 
-**Can I opt out?**
+* Extra step to confirm the deletion of a product
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+[**:back:** *Table of Content*](#Table-of-Content)
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+## Future features to implement
 
-**Anything more?**
+[**:back:** *Table of Content*](#Table-of-Content)
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+## Database
 
----
+### Database design
 
-Happy coding!
+### Database Structure
+
+#### Models relationship
+
+## Technologies Used
+
+### Programming Languages
+
+This project was developed using:
+
+* HTML
+* CSS
+* Python
+* Jinja templating language.
+
+### Frameworks, Libraries and Programs
+
+* [Balsamiq](https://balsamiq.com/wireframes/)  
+For creating wireframes.
+
+* [Google Fonts](https://fonts.google.com/)  
+For importing fonts.
+
+* [favicon.io](https://favicon.io/favicon-generator/)  
+For generating the favicon.
+
+* [TinyPNG](https://tinypng.com/) or [Squoosh](https://squoosh.app/)  
+For resizing all the images.
+
+* [Adobe Color](https://color.adobe.com/create/image)  
+For extracting the color scheme used on the website.
+
+* [Am I Responsive?](http://ami.responsivedesign.is/?url=http://ami.responsivedesign.is/#)  
+For providing screenshots of the responsiveness of the website across several devices.
+
+* [Autoprefixer CSS online](https://autoprefixer.github.io/)  
+For adding prefixer in style.css for cross browser compatibility.
+
+* [Git](https://git-scm.com/)  
+For Version control.
+
+* [GitPod](https://www.gitpod.io/)  
+For Integrated Development Environment.
+
+* [GitHub](https://github.com/)  
+For hosting the repository.
+
+[**:back:** *Table of Content*](#Table-of-Content)
+
+## Deployment
+
+This project is developed on [Gitpod Workspaces IDE](https://www.gitpod.io/) (Integrated Development Environment) committed and pushed to [GitHub](https://github.com), to the [project repository](https://github.com/Tom-Nagy/together-hackathon-june-22) using Gitpod Command Line Interface (CLI) with [Git version control](https://git-scm.com/).
+
+It is a team project that was build by creating pull request in order to merge the code with **main**. The main branch has been protected and pull request have to be reviewed before to be merged.
+
+[**:back:** *Table of Content*](#Table-of-Content)
