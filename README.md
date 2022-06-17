@@ -30,6 +30,8 @@ Connect With is a web application where users can connect and talk or share expe
 It can be difficult sometimes to talk about something when we don't feel that the person with whom we share does not understand or share the same ideas. Though it is a necessity as human to connect and belong.  
 Connect With provides a safe place where everyone is welcome and can share, experience and participate in the community.
 
+Unregistered user have a read only access and if they want to participate to discussions or ask question, they will have to registered.
+
 ### Developer and Business Goals
 
 * Develop a viable web application.
@@ -106,11 +108,11 @@ There are no audio, video or images used at the moment.
 
 ![Site map](documentation/wireframes/site-map.png)
 
-* [Home page](documentation/wireframes/home.pdf)
+* [Home page](documentation/wireframes/home.png)
 
 For the full version:
 
-* [Connect With](documentation/wireframes/connect-with.pdf)
+* [Connect With](documentation/wireframes/connect-with.png)
 
 [**:back:** *Table of Content*](#Table-of-Content)
 
