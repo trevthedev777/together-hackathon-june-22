@@ -108,11 +108,7 @@ There are no audio, video or images used at the moment.
 
 ![Site map](documentation/wireframes/site-map.png)
 
-* [Home page](documentation/wireframes/home.png)
-
-For the full version:
-
-* [Connect With](documentation/wireframes/connect-with.png)
+![Home page](documentation/wireframes/home.png)
 
 [**:back:** *Table of Content*](#Table-of-Content)
 
