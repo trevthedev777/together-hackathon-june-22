@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 import os
-f os.path.exists('env.py'):
+if os.path.exists('env.py'):
     import env
 
 from pathlib import Path
