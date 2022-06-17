@@ -1,18 +1,22 @@
 from django.shortcuts import render
-from .models import Chatroom
+from .models import Chatroom, Comment
 
 # Create your views here.
 
 def chatrooms(request):
     """
     A view to display all the chatrooms
-    """
-    chatroom = Chatroom.objects.all()
+    # """
+    chatrooms = Chatroom.objects.all()
+
 
 
     template = 'chatrooms/chatrooms.html'
     context = {
-        'chatroom': chatroom,
+        'chatrooms': chatrooms,
     }
+
+
+
 
     return render(request, template, context)
