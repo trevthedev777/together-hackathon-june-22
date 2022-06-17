@@ -16,11 +16,18 @@ Visit the live Website : **[Connect With :arrow_right:](https://XXXXXXXXX)**
   * [Different Design](#Different-Design)
 * [Features](#Features)
 * [Future features to implement](#Future-features-to-implement)
-<!-- * [Database](#Database)
+* [Database](#Database)
   * [Database Design](#Database-Design)
-  * [Database Structure](#Database-Structure) -->
+  * [Database Structure](#Database-Structure)
 * [Technologies Used](#Technologies-Used)
-* [Deployment](#Deployment)
+* [Deployment](#Deployment) [:fast_forward: DEPLOYMENT.md](DEPLOYMENT.md)
+  * [Get Started](DEPLOYMENT.md#Get-Started)
+    * [Cloning](DEPLOYMENT.md#Cloning)
+    * [Forking](DEPLOYMENT.md#Forking)
+    * [Installations and dependencies](DEPLOYMENT.md#Installations-and-dependencies)
+  * [Live Deployment](DEPLOYMENT.md#Live-Deployment)
+    * [Create the Heroku app](DEPLOYMENT.md#Create-the-Heroku-app)
+    * [Final Steps](DEPLOYMENT.md#Final-Steps)
 
 ## Project
 
@@ -185,9 +192,21 @@ For hosting the repository.
 
 ## Deployment
 
+Deployment information are published in a separate file for better readability.  
+Please see [DEPLOYMENT.md](DEPLOYMENT.md)
+
 This project is developed on [Gitpod Workspaces IDE](https://www.gitpod.io/) (Integrated Development Environment) committed and pushed to [GitHub](https://github.com), to the [project repository](https://github.com/Tom-Nagy/together-hackathon-june-22) using Gitpod Command Line Interface (CLI) with [Git version control](https://git-scm.com/).
 
 It is a team project that was build by creating pull request in order to merge the code with **main**. The main branch has been protected and pull request have to be reviewed before to be merged.
+
+* [DEPLOYMENT.md](DEPLOYMENT.md)
+  * [Get Started](DEPLOYMENT.md#Get-Started)
+    * [Cloning](DEPLOYMENT.md#Cloning)
+    * [Forking](DEPLOYMENT.md#Forking)
+    * [Installations and dependencies](DEPLOYMENT.md#Installations-and-dependencies)
+  * [Live Deployment](DEPLOYMENT.md#Live-Deployment)
+    * [Create the Heroku app](DEPLOYMENT.md#Create-the-Heroku-app)
+    * [Final Steps](DEPLOYMENT.md#Final-Steps)
 
 [**:back:** *Table of Content*](#Table-of-Content)
 
