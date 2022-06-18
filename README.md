@@ -1,8 +1,8 @@
-# ConnectWith
+# Connect With
 
 ![Mockup](documentation/mockup/mockup.png)
 
-Visit the live Website : **[Connect With :arrow_right:](https://XXXXXXXXX)**
+Visit the live Website : **[Connect With :arrow_right:](https://connect-with.herokuapp.com/)**
 
 ## Table of Content
 
@@ -32,7 +32,17 @@ Visit the live Website : **[Connect With :arrow_right:](https://XXXXXXXXX)**
   - [Technologies Used](#technologies-used)
     - [Programming Languages](#programming-languages)
     - [Frameworks, Libraries and Programs](#frameworks-libraries-and-programs)
-  - [Deployment](#deployment)
+  - [Deployment](#Deployment) [:fast_forward: DEPLOYMENT.md](DEPLOYMENT.md)
+    - [Get Started](#Get-Started)
+    - [Cloning](#Cloning)
+    - [Forking](#Forking)
+    - [Installations and dependencies](#Installations-and-dependencies)
+  - [Live Deployment](#Live-Deployment)
+    - [Create the Heroku app](#Create-the-Heroku-app)
+    - [Set up AWS s3 to host our static files and images](#Set-up-AWS-s3-to-host-our-static-files-and-images)
+    - [Connect Django to s3](#Connect-Django-to-s3)
+    - [Add Media folder to our bucket](#Add-Media-folder-to-our-bucket)
+    - [Final Steps](#Final-Steps)
   - [Credit](#credit)
     - [Content](#content)
 
@@ -233,13 +243,16 @@ This project is developed on [Gitpod Workspaces IDE](https://www.gitpod.io/) (In
 It is a team project that was build by creating pull request in order to merge the code with **main**. The main branch has been protected and pull request have to be reviewed before to be merged.
 
 * [DEPLOYMENT.md](DEPLOYMENT.md)
-  * [Get Started](DEPLOYMENT.md#Get-Started)
-    * [Cloning](DEPLOYMENT.md#Cloning)
-    * [Forking](DEPLOYMENT.md#Forking)
-    * [Installations and dependencies](DEPLOYMENT.md#Installations-and-dependencies)
-  * [Live Deployment](DEPLOYMENT.md#Live-Deployment)
-    * [Create the Heroku app](DEPLOYMENT.md#Create-the-Heroku-app)
-    * [Final Steps](DEPLOYMENT.md#Final-Steps)
+  * [Get Started](#Get-Started)
+  * [Cloning](#Cloning)
+  * [Forking](#Forking)
+  * [Installations and dependencies](#Installations-and-dependencies)
+* [Live Deployment](#Live-Deployment)
+  * [Create the Heroku app](#Create-the-Heroku-app)
+  * [Set up AWS s3 to host our static files and images](#Set-up-AWS-s3-to-host-our-static-files-and-images)
+  * [Connect Django to s3](#Connect-Django-to-s3)
+  * [Add Media folder to our bucket](#Add-Media-folder-to-our-bucket)
+  * [Final Steps](#Final-Steps)
 
 [**:back:** *Table of Content*](#Table-of-Content)
 

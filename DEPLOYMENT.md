@@ -81,6 +81,8 @@ To Fork a repository take the following steps :
 2. Identify the ```fork``` button on the top right of the page and click on it.
 3. Now you should find a copy of the repository in ```Your repositories```.
 
+[**:back:** *Table of Content*](#Table-of-Content)
+
 ### Installations and dependencies
 
 * A requirements.txt file was created in the main project folder. This file tells what applications and dependencies are required to run the application. When you have created/cloned/forked the project, it is import to run this command in the CLI:
@@ -99,6 +101,8 @@ To Fork a repository take the following steps :
 * This Project was build with the Django framework, a very powerful and extensive open source project. You can find documentation in the [official Django repo](https://github.com/django/django).
 
 The next step is the live deployment of the website :arrow_double_down:
+
+[**:back:** *Table of Content*](#Table-of-Content)
 
 ## Live Deployment
 
@@ -223,6 +227,8 @@ The next step is the live deployment of the website :arrow_double_down:
     * Enable Automatic deploys in the next section.
     * Now every time you add, commit and push to GitHub, it will automatically deploy to Heroku.
 
+[**:back:** *Table of Content*](#Table-of-Content)
+
 ### Set up AWS s3 to host our static files and images
 
 Now we will set up Amazon Web Services ([AWS](https://aws.amazon.com/)) s3 (simple storage service) which is a cloud-based storage service that will allow us to store static files and images for the project.
@@ -345,6 +351,8 @@ Now we will set up Amazon Web Services ([AWS](https://aws.amazon.com/)) s3 (simp
 :warning: Now download the CSV file which will contain the users access key and secret access key which we'll use to authenticate them from our Django app.  
 **:warning:It is very important you download and save this CSV because once we have gone through this process we CANNOT DOWNLOAD THEM AGAIN. :no_entry:**
 
+[**:back:** *Table of Content*](#Table-of-Content)
+
 ### Connect Django to s3
 
 1. Back to your IDE, we will need to install boto3 and django-storages.
@@ -434,6 +442,8 @@ Now you can remove/delete the ``DISABLE_COLLECTSTATIC`` variable from the list o
 
 5. You can now add, commit and push your changes to GitHub. Your static files are now deployed automatically.
 
+[**:back:** *Table of Content*](#Table-of-Content)
+
 ### Add Media folder to our bucket
 
 The media folder has not been created at the moment because it is not used. The steps to create it are simple and explained for future use if needed.
@@ -445,6 +455,8 @@ The media folder has not been created at the moment because it is not used. The 
 * Click Add Files and select all the product images. If you need to download them all, you can do so from your own GitHub repo.
 * In Permissions > Access control list (ACL) > Predefined ACLs select "Grant public-read access" and tick you understand the risks.
 * Click on Upload.
+
+[**:back:** *Table of Content*](#Table-of-Content)
 
 ### Final Steps
 
@@ -459,3 +471,5 @@ The media folder has not been created at the moment because it is not used. The 
 * Click on your email address and mark it as **verified** and **primary**.
 * Click save.
 * You have now successfully register and can log out and login into the website.
+
+[**:back:** *Table of Content*](#Table-of-Content)
