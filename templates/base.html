@@ -70,6 +70,53 @@
             </div>
         {% endif %}
 
+        <!-- Nav bar -->
+        <nav class="site-nav navbar navbar-expand-md navbar-light px-5">
+            <div class="container">
+
+            <a class="logo navbar-brand" href="#">Connect With</a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+                class="collapse navbar-collapse site-navigation"
+                id="navbarNavDropdown"
+            >
+                <ul class="navbar-nav ml-auto site-menu">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#"
+                    >About us <span class="sr-only">(current)</span></a
+                    >
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'chatrooms' %}" aria-label="Link to the chatroom page.">Chat rooms</a>
+                </li>
+                <li class="nav-item mr-2 d-block d-sm-none">
+                    <a class="nav-link" href="{% url 'account_login' %}" aria-label="Link to log in page.">Sign in</a>
+                </li>
+                <li class="nav-item mr-2 d-block d-sm-none">
+                    <a class="nav-link" href="{% url 'account_signup' %}" aria-label="Link to create an account page.">Sign up</a>
+                </li>
+                </ul>
+            </div>
+
+            <div class="d-none d-md-block">
+                <a class="btn btn--cta btn--black" href="{% url 'account_login' %}" aria-label="Link to log in page.">Sign in</a>
+                <a class="btn btn--cta btn--black" href="{% url 'account_signup' %}" aria-label="Link to create an account page.">Sign up</a>
+
+            </div>
+            </div>
+        </nav>
+        <!-- End Nav bar -->
+
         {% block content %}
         {% endblock %}
 
