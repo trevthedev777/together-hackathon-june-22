@@ -436,6 +436,8 @@ Now you can remove/delete the ``DISABLE_COLLECTSTATIC`` variable from the list o
 
 ### Add Media folder to our bucket
 
+The media folder has not been created at the moment because it is not used. The steps to create it are simple and explained for future use if needed.
+
 * Navigate to your s3 bucket and to the Objects tab.
 * Click on the Create Folder.
 * Name your folder "media" and click Create folder.
@@ -443,7 +445,6 @@ Now you can remove/delete the ``DISABLE_COLLECTSTATIC`` variable from the list o
 * Click Add Files and select all the product images. If you need to download them all, you can do so from your own GitHub repo.
 * In Permissions > Access control list (ACL) > Predefined ACLs select "Grant public-read access" and tick you understand the risks.
 * Click on Upload.
-
 
 ### Final Steps
 
