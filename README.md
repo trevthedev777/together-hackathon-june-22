@@ -32,6 +32,7 @@ Visit the live Website : **[Connect With :arrow_right:](https://connect-with.her
   - [Technologies Used](#technologies-used)
     - [Programming Languages](#programming-languages)
     - [Frameworks, Libraries and Programs](#frameworks-libraries-and-programs)
+
   - [Deployment](#Deployment) [:fast_forward: DEPLOYMENT.md](DEPLOYMENT.md)
     - [Get Started](#Get-Started)
     - [Cloning](#Cloning)
@@ -43,6 +44,7 @@ Visit the live Website : **[Connect With :arrow_right:](https://connect-with.her
     - [Connect Django to s3](#Connect-Django-to-s3)
     - [Add Media folder to our bucket](#Add-Media-folder-to-our-bucket)
     - [Final Steps](#Final-Steps)
+
   - [Credit](#credit)
     - [Content](#content)
 
@@ -133,6 +135,10 @@ There are no audio, video or images used at the moment.
 ![Site map](documentation/wireframes/site-map.png)
 
 ![Home page](documentation/wireframes/home.png)
+![About-us page](documentation/wireframes/about-us.png)
+![Chat-room page](documentation/wireframes/chat-room.png)
+![mobile page](documentation/wireframes/mobile.png)
+
 
 ![About-us page](documentation/wireframes/About-us.png)
 ![Chat-room page](documentation/wireframes/Chat-room.png)
