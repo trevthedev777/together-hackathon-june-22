@@ -10,16 +10,18 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+
+import dj_database_url 
+
 import os
 if os.path.exists('env.py'):
     import env
 
-from dotenv import load_dotenv
-load_dotenv()
+if os.path.exists('dotenv'):
+    from dotenv import load_dotenv
+    load_dotenv()
 
 from pathlib import Path
-from dotenv import load_dotenv
-load_dotenv()
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -35,8 +37,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
-CSRF_TRUSTED_ORIGINS = ['localhost']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'connect-with.herokuapp.com']
+CSRF_TRUSTED_ORIGINS = ['localhost', '127.0.0.1', 'connect-with.herokuapp.com']
 
 
 # Application definition
@@ -129,13 +131,17 @@ WSGI_APPLICATION = 'connect_with.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
-}
-
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
