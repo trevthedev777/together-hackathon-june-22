@@ -44,6 +44,7 @@ Visit the live Website : **[Connect With :arrow_right:](https://connect-with.her
     - [Connect Django to s3](DEPLOYMENT.md#Connect-Django-to-s3)
     - [Add Media folder to our bucket](DEPLOYMENT.md#Add-Media-folder-to-our-bucket)
     - [Final Steps](DEPLOYMENT.md#Final-Steps)
+      - [Email set up with Django](DEPLOYMENT.md#Email-set-up-with-Django)
 
   - [Credit](#credit)
     - [Content](#content)
@@ -248,6 +249,7 @@ It is a team project that was build by creating pull request in order to merge t
   * [Connect Django to s3](DEPLOYMENT.md#Connect-Django-to-s3)
   * [Add Media folder to our bucket](DEPLOYMENT.md#Add-Media-folder-to-our-bucket)
   * [Final Steps](DEPLOYMENT.md#Final-Steps)
+    * [Email set up with Django](DEPLOYMENT.md#Email-set-up-with-Django)
 
 [**:back:** *Table of Content*](#Table-of-Content)
 
