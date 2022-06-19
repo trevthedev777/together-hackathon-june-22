@@ -9,18 +9,46 @@ body {
     position: relative;
     font-family: 'Lato', sans-serif;
     color: #0d0d0d;
-    background-color: #f2f2f2;
+    background-color: #eeedeb;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: 'Poppins', sans-serif;
-    color: #634628;
+    color: #6a9eb0;
 }
 
-p {
+/* p {
     max-width: 60ch;
+} */
+
+/* --------------------------Nav bar */
+.site-nav {
+    padding-top: 3vw;
+    padding-bottom: 3vw;
 }
 
+.logo {
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 25px;
+}
+
+.site-menu li {
+    padding-right: 15px;
+}
+
+.site-menu li a {
+    letter-spacing: 1xpx;
+    font-family: "Poppins";
+    font-weight: 400;
+}
+
+
+
+
+/* --------------------------Buttons */
 .btn,
 button,
 a {
@@ -35,12 +63,6 @@ a {
     cursor: pointer;
 
     border: none;
-}
-
-.btn,
-button {
-    color: #0d0d0d;
-    background-color: #b1e9fc;
 }
 
 a {
@@ -64,7 +86,22 @@ a:active,
 a:focus {
     text-decoration: underline;
     color: #0d0d0d;
-    text-shadow: .5px 1px 2px #b1e9fc;
+    text-shadow: .5px 0.5px 1px #b1e9fc;
+}
+
+.btn--cta {
+    font-weight: bold;
+    width: 160px;
+    border-radius: 0;
+    padding: 15px 5px;
+    width: 200px;
+
+}
+
+.btn--black {
+    color: #eeedeb;
+    background-color: #000000;
+    border-color: #000000;
 }
 
 /* colors */
@@ -107,6 +144,10 @@ a:focus {
     background-color: #f2f2f2;
 }
 
+.bg-info{
+    background-color: #8ab4c2 !important;
+}
+
 /* --------------------------------------- Toasts messages */
 
 .message-container {
@@ -118,4 +159,87 @@ a:focus {
 
 .toast-capper {
     height: 2px;
+}
+
+/* --------------------------------------- Hero */
+
+.hero {
+    padding-top: 3rem;
+    padding-bottom: 10rem;
+}
+
+.img-fluid {
+    margin-top: 50px;
+}
+
+.sdac {
+    letter-spacing: 2px;
+
+}
+
+.heading {
+    font-size: 50px;
+    font-weight: 700 !important;
+}
+
+/* --------------------------------- allauth */
+
+.allauth-form-inner-content {
+    margin-top: 1.5rem;
+}
+
+.allauth-form-inner-content p {
+    margin-top: 1.5rem; /* mt-4 */
+    color: #0d0d0d;
+}
+
+.allauth-form-inner-content input {
+    border-color: #000;
+    border-radius: 0;
+}
+
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: #325663;
+}
+
+.allauth-form-inner-content button,
+.allauth-form-inner-content input[type='submit'] {
+	/* btn class
+    Copied from the inspector tool and adapted to the project
+    */
+	display: inline-block;
+    font-weight: bold;
+    color: #eeedeb;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #000;
+    border-color: #000;
+    padding: 5px;
+    margin-left: 6px;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0;
+
+    /* standard bootstrap btn transitions */
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.allauth-form-inner-content button:hover,
+.allauth-form-inner-content input[type='submit']:hover {
+	text-decoration: none;
+    color: #b1e9fc;
+    background-color: #0d0d0d;
+    outline: none;
+}
+
+.allauth-form-inner-content a {
+	color: #6a9eb0;
 }

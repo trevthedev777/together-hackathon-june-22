@@ -1,40 +1,60 @@
-# ConnectWith
+# Connect With
 
 ![Mockup](documentation/mockup/mockup.png)
 
-Visit the live Website : **[Connect With :arrow_right:](https://XXXXXXXXX)**
+Visit the live Website : **[Connect With :arrow_right:](https://connect-with.herokuapp.com/)**
 
 ## Table of Content
 
-* [Project](#Project)
-  * [Project Goals](#Project-Goals)
-  * [Developer and Business Goals](#Developer-and-Business-Goals)
-* [UX](#UX)
-  * [Audience Definition](#Audience-Definition)
-  * [User Stories](#User-Stories)
-  * [Wireframes](#Wireframes)
-  * [Different Design](#Different-Design)
-* [Features](#Features)
-* [Future features to implement](#Future-features-to-implement)
-* [Database](#Database)
-  * [Database Design](#Database-Design)
-  * [Database Structure](#Database-Structure)
-* [Technologies Used](#Technologies-Used)
-* [Deployment](#Deployment) [:fast_forward: DEPLOYMENT.md](DEPLOYMENT.md)
-  * [Get Started](DEPLOYMENT.md#Get-Started)
-    * [Cloning](DEPLOYMENT.md#Cloning)
-    * [Forking](DEPLOYMENT.md#Forking)
-    * [Installations and dependencies](DEPLOYMENT.md#Installations-and-dependencies)
-  * [Live Deployment](DEPLOYMENT.md#Live-Deployment)
-    * [Create the Heroku app](DEPLOYMENT.md#Create-the-Heroku-app)
-    * [Final Steps](DEPLOYMENT.md#Final-Steps)
+- [ConnectWith](#connectwith)
+  - [Table of Content](#table-of-content)
+  - [Project](#project)
+    - [Project Goals](#project-goals)
+    - [Developer and Business Goals](#developer-and-business-goals)
+  - [UX](#ux)
+    - [Audience definition](#audience-definition)
+    - [User stories](#user-stories)
+      - [Fonts](#fonts)
+      - [Icons](#icons)
+      - [Colors](#colors)
+      - [Styling/Feeling](#stylingfeeling)
+      - [Audio/Video/Images](#audiovideoimages)
+    - [Wireframes](#wireframes)
+    - [Different design](#different-design)
+  - [Features](#features)
+    - [feature name .....](#feature-name-)
+    - [Defensive design](#defensive-design)
+  - [Future features to implement](#future-features-to-implement)
+  - [Database](#database)
+    - [Database design](#database-design)
+    - [Database Structure](#database-structure)
+      - [Models relationship](#models-relationship)
+  - [Technologies Used](#technologies-used)
+    - [Programming Languages](#programming-languages)
+    - [Frameworks, Libraries and Programs](#frameworks-libraries-and-programs)
+
+  - [Deployment](#Deployment) [:fast_forward: DEPLOYMENT.md](DEPLOYMENT.md)
+    - [Get Started](DEPLOYMENT.md#Get-Started)
+    - [Cloning](DEPLOYMENT.md#Cloning)
+    - [Forking](DEPLOYMENT.md#Forking)
+    - [Installations and dependencies](DEPLOYMENT.md#Installations-and-dependencies)
+  - [Live Deployment](DEPLOYMENT.md#Live-Deployment)
+    - [Create the Heroku app](DEPLOYMENT.md#Create-the-Heroku-app)
+    - [Set up AWS s3 to host our static files and images](DEPLOYMENT.md#Set-up-AWS-s3-to-host-our-static-files-and-images)
+    - [Connect Django to s3](DEPLOYMENT.md#Connect-Django-to-s3)
+    - [Add Media folder to our bucket](DEPLOYMENT.md#Add-Media-folder-to-our-bucket)
+    - [Final Steps](DEPLOYMENT.md#Final-Steps)
+      - [Email set up with Django](DEPLOYMENT.md#Email-set-up-with-Django)
+
+  - [Credit](#credit)
+    - [Content](#content)
 
 ## Project
 
 ### Project Goals
 
-Connect With is a web application where users can connect and talk or share experiences. This project promotes togetherness and community.  
-It can be difficult sometimes to talk about something when we don't feel that the person with whom we share does not understand or share the same ideas. Though it is a necessity as human to connect and belong.  
+Connect With is a web application where users can connect and talk or share experiences. This project promotes togetherness and community.
+It can be difficult sometimes to talk about something when we don't feel that the person with whom we share does not understand or share the same ideas. Though it is a necessity as human to connect and belong.
 Connect With provides a safe place where everyone is welcome and can share, experience and participate in the community.
 
 Unregistered user have a read only access and if they want to participate to discussions or ask question, they will have to registered.
@@ -102,7 +122,7 @@ The colours chosen for the website are simple.
 
 #### Styling/Feeling
 
-The feel of the website is welcoming and simple to provide a quick access and learning process.  
+The feel of the website is welcoming and simple to provide a quick access and learning process.
 It makes users comfortable.
 
 #### Audio/Video/Images
@@ -116,6 +136,9 @@ There are no audio, video or images used at the moment.
 ![Site map](documentation/wireframes/site-map.png)
 
 ![Home page](documentation/wireframes/home.png)
+![About-us page](documentation/wireframes/about-us.png)
+![Chat-room page](documentation/wireframes/chat-room.png)
+![mobile page](documentation/wireframes/mobile.png)
 
 [**:back:** *Table of Content*](#Table-of-Content)
 
@@ -125,7 +148,7 @@ There are no audio, video or images used at the moment.
 
 ## Features
 
-### feature name ..... 
+### feature name .....
 
 ### Defensive design
 
@@ -138,12 +161,29 @@ There are no audio, video or images used at the moment.
 [**:back:** *Table of Content*](#Table-of-Content)
 
 ## Database
+As a framework Django works with SQL databases. The built-in sqlite3 has been used to create the database for this project.
 
 ### Database design
+- Chatroom Model
+  - Within the chatrooms app, the Chatroom model holds the data needed for different chatrooms.
 
-### Database Structure
+| Name | Key in db | Validation | Field Type |
+| ----------- | ----------- | ----------- | ----------- |
+| chatroom_id | chatroom_id | primary_key=True | AutoField |
+| name | name | max_length=20, blank=False | CharField |
+| subject | subject | max_length=145, blank=False, null=False | CharField |
+| date_created | date_created | auto_now_add=True | AutoField |
 
-#### Models relationship
+- Comment Model
+  - Within the chatrooms app, the Comment model holds the data needed for different comments in each chatroom.
+
+| Name | Key in db | Validation | Field Type |
+| ----------- | ----------- | ----------- | ----------- |
+| comment_id | comment_id | primary_key=True | AutoField |
+| chatroom | chatroom | on_delete=models.CASCADE, related_name='comment' | ForeignKey to Chatroom |
+| user | user | on_delete=models.CASCADE, related_name='comment' | ForeignKey to User |
+| content | content | blank=True, null=True | TextField |
+| date | date | auto_now_add=True | DateTimeField |
 
 ## Technologies Used
 
@@ -158,41 +198,41 @@ This project was developed using:
 
 ### Frameworks, Libraries and Programs
 
-* [Balsamiq](https://balsamiq.com/wireframes/)  
+* [Balsamiq](https://balsamiq.com/wireframes/)
 For creating wireframes.
 
-* [Google Fonts](https://fonts.google.com/)  
+* [Google Fonts](https://fonts.google.com/)
 For importing fonts.
 
-* [favicon.io](https://favicon.io/favicon-generator/)  
+* [favicon.io](https://favicon.io/favicon-generator/)
 For generating the favicon.
 
-* [TinyPNG](https://tinypng.com/) or [Squoosh](https://squoosh.app/) or [Befunky](https://www.befunky.com/)  
+* [TinyPNG](https://tinypng.com/) or [Squoosh](https://squoosh.app/) or [Befunky](https://www.befunky.com/)
 For resizing all the images.
 
-* [Adobe Color](https://color.adobe.com/create/image)  
+* [Adobe Color](https://color.adobe.com/create/image)
 For extracting the color scheme used on the website.
 
-* [Am I Responsive?](http://ami.responsivedesign.is/?url=http://ami.responsivedesign.is/#)  
+* [Am I Responsive?](http://ami.responsivedesign.is/?url=http://ami.responsivedesign.is/#)
 For providing screenshots of the responsiveness of the website across several devices.
 
-* [Autoprefixer CSS online](https://autoprefixer.github.io/)  
+* [Autoprefixer CSS online](https://autoprefixer.github.io/)
 For adding prefixer in style.css for cross browser compatibility.
 
-* [Git](https://git-scm.com/)  
+* [Git](https://git-scm.com/)
 For Version control.
 
-* [GitPod](https://www.gitpod.io/)  
+* [GitPod](https://www.gitpod.io/)
 For Integrated Development Environment.
 
-* [GitHub](https://github.com/)  
+* [GitHub](https://github.com/)
 For hosting the repository.
 
 [**:back:** *Table of Content*](#Table-of-Content)
 
 ## Deployment
 
-Deployment information are published in a separate file for better readability.  
+Deployment information are published in a separate file for better readability.
 Please see [DEPLOYMENT.md](DEPLOYMENT.md)
 
 This project is developed on [Gitpod Workspaces IDE](https://www.gitpod.io/) (Integrated Development Environment) committed and pushed to [GitHub](https://github.com), to the [project repository](https://github.com/Tom-Nagy/together-hackathon-june-22) using Gitpod Command Line Interface (CLI) with [Git version control](https://git-scm.com/).
@@ -201,12 +241,16 @@ It is a team project that was build by creating pull request in order to merge t
 
 * [DEPLOYMENT.md](DEPLOYMENT.md)
   * [Get Started](DEPLOYMENT.md#Get-Started)
-    * [Cloning](DEPLOYMENT.md#Cloning)
-    * [Forking](DEPLOYMENT.md#Forking)
-    * [Installations and dependencies](DEPLOYMENT.md#Installations-and-dependencies)
-  * [Live Deployment](DEPLOYMENT.md#Live-Deployment)
-    * [Create the Heroku app](DEPLOYMENT.md#Create-the-Heroku-app)
-    * [Final Steps](DEPLOYMENT.md#Final-Steps)
+  * [Cloning](DEPLOYMENT.md#Cloning)
+  * [Forking](DEPLOYMENT.md#Forking)
+  * [Installations and dependencies](DEPLOYMENT.md#Installations-and-dependencies)
+* [Live Deployment](DEPLOYMENT.md#Live-Deployment)
+  * [Create the Heroku app](DEPLOYMENT.md#Create-the-Heroku-app)
+  * [Set up AWS s3 to host our static files and images](DEPLOYMENT.md#Set-up-AWS-s3-to-host-our-static-files-and-images)
+  * [Connect Django to s3](DEPLOYMENT.md#Connect-Django-to-s3)
+  * [Add Media folder to our bucket](DEPLOYMENT.md#Add-Media-folder-to-our-bucket)
+  * [Final Steps](DEPLOYMENT.md#Final-Steps)
+    * [Email set up with Django](DEPLOYMENT.md#Email-set-up-with-Django)
 
 [**:back:** *Table of Content*](#Table-of-Content)
 

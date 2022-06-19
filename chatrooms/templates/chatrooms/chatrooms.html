@@ -2,14 +2,77 @@
 {% load static %}
 
 {% block content %}
-    <div class="container-fluid">
-        <div class="row">
-            {% for c in chatrooms %}
-                <div class="col-4">
-                    {{ c }}
+<div class="container-fluid my-4">
+    <div class="row my-5">
+        <div class="col-12">
+            <h2 class="text-center">Chatrooms</h2>
+            <button class="btn btn-success" type="button" data-toggle="modal" data-target="#myModal">
+                Open a new chatroom <i class="fa-solid fa-plus pl-1"></i>
+            </button>
+        </div>
+    </div>
+    <div class="modal" tabindex="-1" role="dialog" id="myModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Open a chatroom</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-            {% endfor %}
+                <div class="modal-body">
+                    <form action="{% url 'chatrooms' %}" method="POST" id="chatroom-form">
+                        {% csrf_token %}
+                        {{ add_chatroom_form | crispy }}
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Discard</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <div class="card-group row">
+                {% for chatroom in chatrooms %}
+                <div class="col-12 col-md-6 col-lg-4 my-3 chatroom-link">
+                    <div class="card rounded">
+                        <a href="{% url 'chatroom_detail' chatroom.chatroom_id %}"></a>
+                        <div class="card-header bg-info">
+                            <h4 class="text-center">{{ chatroom.name }}</h4>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">{{ chatroom.subject|slice:"40" }}...</p>
+                            <p class="card-text"><small class="text-muted">Created : {{ chatroom.date_created }}</small></p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
 
         </div>
     </div>
+</div>
+{% endblock %}
+
+
+{% block postloadjs %}
+    <script>
+        "Makes the entire chatroom cards clickable"
+        $(".chatroom-link").click(function () {
+            window.location = $(this).find("a").attr("href");
+            return false;
+        });
+    </script>
+
+    <script>
+        // Prevents resubmission of forms on page refresh
+        if ( window.history.replaceState ) {
+          window.history.replaceState( null, null, window.location.href );
+        }
+    </script>
+
 {% endblock %}
