@@ -139,13 +139,6 @@ There are no audio, video or images used at the moment.
 ![Chat-room page](documentation/wireframes/chat-room.png)
 ![mobile page](documentation/wireframes/mobile.png)
 
-
-![About-us page](documentation/wireframes/About-us.png)
-![Chat-room page](documentation/wireframes/Chat-room.png)
-![mobile page](documentation/wireframes/mobile.png)
-
-
-
 [**:back:** *Table of Content*](#Table-of-Content)
 
 ### Different design
@@ -179,10 +172,8 @@ As a framework Django works with SQL databases. The built-in sqlite3 has been us
 | name | name | max_length=20, blank=False | CharField |
 | subject | subject | max_length=145, blank=False, null=False | CharField |
 
-
 - Comment Model
   - Within the chatrooms app, the Comment model holds the data needed for different comments in each chatroom.
-
 
 | Name | Key in db | Validation | Field Type |
 | ----------- | ----------- | ----------- | ----------- |
@@ -191,8 +182,6 @@ As a framework Django works with SQL databases. The built-in sqlite3 has been us
 | user | user | on_delete=models.CASCADE, related_name='comment' | ForeignKey to User |
 | content | content | blank=True, null=True | TextField |
 | date | date | auto_now_add=True | DateTimeField |
-
-
 
 ## Technologies Used
 
