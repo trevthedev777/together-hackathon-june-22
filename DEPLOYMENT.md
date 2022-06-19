@@ -16,6 +16,7 @@ Visit the live Website : **[Connect With :arrow_right:](https://connect-with.her
   * [Connect Django to s3](#Connect-Django-to-s3)
   * [Add Media folder to our bucket](#Add-Media-folder-to-our-bucket)
   * [Final Steps](#Final-Steps)
+    * [Email set up with Django](#Email-set-up-with-Django)
 
 This project is developed on [GitPod Workspaces IDE](https://www.gitpod.io/) (Integrated Development Environment) committed and pushed to [GitHub](https://github.com), to [The hackathon group repository](https://github.com/Tom-Nagy/together-hackathon-june-22) using GitPod Command Line Interface (CLI) with [Git version control](https://git-scm.com/).
 
@@ -471,5 +472,53 @@ The media folder has not been created at the moment because it is not used. The 
 * Click on your email address and mark it as **verified** and **primary**.
 * Click save.
 * You have now successfully register and can log out and login into the website.
+
+[**:back:** *Table of Content*](#Table-of-Content)
+
+#### Email set up with Django
+
+We are going to use Gmail because it is easy to use, very popular, and it provides a free SMTP server that we can use to send email.
+
+* Login to your Gmail account or create one if needed.
+* Go to settings on the upper right, and click see all settings.
+* Click on Accounts and Import tab.
+* In the "Change account settings:" section, click on "Other Google Account settings" link.
+* Go to the Security tab and navigate to "Signing in to Google".
+* Select 2-Step Verification. This will allow us to create an app password specific to our Django app that will allow it to authenticate and use our Gmail account to send emails.
+* Click on Get Started, enter your credential and click next.
+* Select your preferred option and click next.
+* Enter the pin to verify and click Turn On.
+* Navigate back to "Signing in to Google" and notice the "App passwords" tab below the 2-Step Verification tab.
+* Click on App passwords and enter your credentials.
+* Select Mail for Select app and Other for Select device and type in Django. You can set whatever you prefer, but it is best practice to stay consistent.
+* Click Generate and copy the given password.
+* Navigate to the settings tab of your Heroku app and enter the following key/value pair:
+
+| KEY                   | VALUE              |
+| --------------------- |------------------- |
+| EMAIL_HOST_PASS       | COPY THE PASSWORD  |
+| EMAIL_HOST_USER       | YOUR GMAIL ACCOUNT |
+
+* Navigate to settings.py in your project IDE and add the following code snippet to set up email.
+
+```python
+
+# Email settings
+if 'DEVELOPMENT' in os.environ:
+  EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+  DEFAULT_FROM_EMAIL = '<your default website email>' # This can be configure in the /admin page of the website under sites.
+else:
+  EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+  EMAIL_USE_TLS = True
+  EMAIL_PORT = 587
+  EMAIL_HOST = 'smtp.gmail.com'
+  EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+  EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
+  DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
+```
+
+* Add, commit and push your changes.
+
+Now you are all set! Well Done :thumbsup:
 
 [**:back:** *Table of Content*](#Table-of-Content)
