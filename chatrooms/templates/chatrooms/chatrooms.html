@@ -6,13 +6,15 @@
     <div class="row my-5">
         <div class="col-12">
             <h2 class="text-center">Chatrooms</h2>
-            <button class="btn btn-success" type="button" data-toggle="modal" data-target="#myModal">
-                Open a new chatroom <i class="fa-solid fa-plus pl-1"></i>
-            </button>
+            {% if request.user.is_authenticated %}
+                <button class="btn btn-success ml-1 ml-md-3 ml-lg-5" type="button" data-toggle="modal" data-target="#myModal">
+                    Open a new chatroom <i class="fa-solid fa-plus pl-1"></i>
+                </button>
+            {% endif %}
         </div>
     </div>
     <div class="modal" tabindex="-1" role="dialog" id="myModal">
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">Open a chatroom</h5>
@@ -20,26 +22,26 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body">
-                    <form action="{% url 'chatrooms' %}" method="POST" id="chatroom-form">
-                        {% csrf_token %}
-                        {{ add_chatroom_form | crispy }}
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                    </form>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Discard</button>
-                </div>
+                <form action="{% url 'chatrooms' %}" method="POST" id="chatroom-form">
+                    <div class="modal-body">
+                            {% csrf_token %}
+                            {{ add_chatroom_form | crispy }}
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Discard</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 
     <div class="row">
         <div class="col">
-            <div class="card-group row">
+            <div class="card-group row justify-content-center">
                 {% for chatroom in chatrooms %}
                 <div class="col-12 col-md-6 col-lg-4 my-3 chatroom-link">
-                    <div class="card rounded">
+                    <div class="card rounded mx-auto">
                         <a href="{% url 'chatroom_detail' chatroom.chatroom_id %}"></a>
                         <div class="card-header bg-info">
                             <h4 class="text-center">{{ chatroom.name }}</h4>
@@ -52,7 +54,6 @@
                 </div>
                 {% endfor %}
             </div>
-
         </div>
     </div>
 </div>
@@ -60,6 +61,7 @@
 
 
 {% block postloadjs %}
+{{ block.super }}
     <script>
         "Makes the entire chatroom cards clickable"
         $(".chatroom-link").click(function () {
@@ -67,12 +69,4 @@
             return false;
         });
     </script>
-
-    <script>
-        // Prevents resubmission of forms on page refresh
-        if ( window.history.replaceState ) {
-          window.history.replaceState( null, null, window.location.href );
-        }
-    </script>
-
 {% endblock %}
