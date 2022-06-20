@@ -17,10 +17,10 @@
         </div>
         {% for i in chatroom.comment.all %}
             <div class="col-8 offset-2 border bg-light p-4 mt-4 rounded">
+                <i class="fa-solid fa-user"></i> {{ i.user }} <br>
+                <small class="text-muted">{{ i.date }}</small>
+                <hr>
                 <p>
-                    <i class="fa-solid fa-user"></i> {{ i.user }} <br>
-                    <small class="text-muted">{{ i.date }}</small>
-                    <hr>
                     {{ i.content }}
                 </p>
             </div>
