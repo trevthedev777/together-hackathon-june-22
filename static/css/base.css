@@ -139,11 +139,11 @@ a:focus {
     background-color: #f2f2f2;
 }
 
-.bg-info{
+.bg-info {
     background-color: #8ab4c2 !important;
 }
 
-.bg-brown{
+.bg-brown {
     background-color: #634628;
 }
 
@@ -187,7 +187,8 @@ a:focus {
 }
 
 .allauth-form-inner-content p {
-    margin-top: 1.5rem; /* mt-4 */
+    margin-top: 1.5rem;
+    /* mt-4 */
     color: #0d0d0d;
 }
 
@@ -206,10 +207,10 @@ a:focus {
 
 .allauth-form-inner-content button,
 .allauth-form-inner-content input[type='submit'] {
-	/* btn class
+    /* btn class
     Copied from the inspector tool and adapted to the project
     */
-	display: inline-block;
+    display: inline-block;
     font-weight: bold;
     color: #eeedeb;
     text-align: center;
@@ -227,19 +228,19 @@ a:focus {
     border-radius: 5px;
 
     /* standard bootstrap btn transitions */
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
 .allauth-form-inner-content button:hover,
 .allauth-form-inner-content input[type='submit']:hover {
-	text-decoration: none;
+    text-decoration: none;
     color: #b1e9fc;
     background-color: #0d0d0d;
     outline: none;
 }
 
 .allauth-form-inner-content a {
-	color: #6a9eb0;
+    color: #6a9eb0;
 }
 
 /* --------------------------------- Events */
@@ -273,11 +274,11 @@ a:focus {
 }
 
 .img-style {
-    position:relative;
-    overflow:hidden;
-    display:inline-block;
-    width:400px;
-    height:235px;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    width: 400px;
+    height: 235px;
     min-width: 400px;
 
 }
@@ -336,20 +337,20 @@ event-title {
 }
 
 /*------------------------------------Media */
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
     .event-img {
         padding-top: 60%;
     }
 }
 
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 1024px) {
     .event-card {
         width: 31.33%;
     }
 }
 
 
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 1024px) {
     .event-card {
         padding: 10px 15px;
     }
