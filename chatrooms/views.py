@@ -1,5 +1,7 @@
+''' Views for the chatroom app '''
+
 from django.shortcuts import (
-    get_object_or_404, redirect, render, reverse)
+    get_object_or_404, redirect, render)
 from .models import Chatroom, Comment
 from .forms import AddChatroomForm, AddCommentForm
 from django.contrib import messages
