@@ -142,6 +142,10 @@ a:focus {
     background-color: #8ab4c2 !important;
 }
 
+.bg-brown{
+    background-color: #634628;
+}
+
 /* --------------------------------------- Toasts messages */
 
 .message-container {
