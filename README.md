@@ -41,6 +41,8 @@ Visit the live Website : **[Connect With :arrow_right:](https://connect-with.her
     - [Final Steps](DEPLOYMENT.md#Final-Steps)
       - [Email set up with Django](DEPLOYMENT.md#Email-set-up-with-Django)
 
+  - [Testing](#Testing) [:fast_forward: TESTING.md](TESTING.md)
+
   - [Credit](#credit)
     - [Content](#content)
 
@@ -272,6 +274,12 @@ It is a team project that was build by creating pull request in order to merge t
   * [Add Media folder to our bucket](DEPLOYMENT.md#Add-Media-folder-to-our-bucket)
   * [Final Steps](DEPLOYMENT.md#Final-Steps)
     * [Email set up with Django](DEPLOYMENT.md#Email-set-up-with-Django)
+
+[**:back:** *Table of Content*](#Table-of-Content)
+
+## Testing
+
+Testing information are published in a separate file for better readability. Please see [TESTING.md](TESTING.md).
 
 [**:back:** *Table of Content*](#Table-of-Content)
 
